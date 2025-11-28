@@ -9,11 +9,24 @@ def findname(target):
         if name == target:
             print("Name found");
             return True
-    
-    print("Name not found")
-    return False
+    else:
+        print("Name not found")
+        return False
 
-print(findname("Creed"))
-print(findname("Tom"))
+# print(findname("Creed"))
+# print(findname("Tom"))
 
 # Check if a number is prime
+def isPrime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            print(f"{num} is not a prime number")
+            break
+    else:
+        print(f"{num} is a prime number")
+        return True
+    
+isPrime(29)
+isPrime(15)
